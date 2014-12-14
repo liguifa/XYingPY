@@ -7,57 +7,57 @@
 </head>
 <body>
 	<div id="page">
-		<div id="header">
-    		<div id="header_main">
-    			<h1 id="logo">XYing代码分享平台</h1>
-    			<input type="search" id="search_box" value="@name" />
-    			<button id="search_btn">搜索</button>
-    		</div>
-    		<div id="nav">
-    			<div id="nav_main">
-    				<ul>
-    					<li>
-    						<a href="#">.Net</a>
-    					</li>
-    					<li>
-    						<a href="#">Java</a>
-    					</li>
-    					<li>
-    						<a href="#">PHP</a>
-    					</li>
-    					<li>
-    						<a href="#">Python</a>
-    					</li>
-    					<li>
-    						<a href="#">Javascript</a>
-    					</li>
-    					<li>
-    						<a href="#">c/c++</a>
-    					</li>
-    				</ul>
-    			</div>
-    		</div>
-		</div>
-		<div id="content">
-			<div id="content_left">
-				<ul>
-					@foreach_news
-					<li>
-						<h2><a href="#">@title</a></h2>
-						<p>@body</p>
-					</li>
-					@forend_news
-				</ul>
-			</div>
-			<div id="content_right">
-				<div>
-					<h3>今日推荐</h3>
-				</div>
-			</div>
-		</div>
-		<div id="footer">
-			<h3>&copy;2014 版权所有 侵权必究</h3>
-		</div>
+    <div id="header">
+        <div id="header_main">
+        	<h1 id="logo">XYing代码分享平台</h1>
+        	<input type="search" id="search_box" value="@name" />
+        	<button id="search_btn">搜索</button>
+        </div>
+        <div id="nav">
+        	<div id="nav_main">
+            <ul>
+            	<li>
+                <a href="#">.Net</a>
+            	</li>
+            	<li>
+                <a href="#">Java</a>
+            	</li>
+            	<li>
+                <a href="#">PHP</a>
+            	</li>
+            	<li>
+                <a href="#">Python</a>
+            	</li>
+            	<li>
+                <a href="#">Javascript</a>
+            	</li>
+            	<li>
+                <a href="#">c/c++</a>
+            	</li>
+            </ul>
+        	</div>
+        </div>
+    </div>
+    <div id="content">
+    	<div id="content_left">
+        <ul>
+        	@foreach_news
+        	<li>
+            <h2><a href="#">@title</a></h2>
+            <p>@body</p>
+        	</li>
+        	@forend_news
+        </ul>
+    	</div>
+    	<div id="content_right">
+        <div>
+        	<h3>今日推荐</h3>
+        </div>
+    	</div>
+    </div>
+    <div id="footer">
+    	<h3>&copy;2014 版权所有 侵权必究</h3>
+    </div>
 	</div>
 </body>
 </html>

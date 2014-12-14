@@ -14,38 +14,38 @@
 	<p>This sample shows how to use JSONP to retrieve data from a remote site.</p>
 	<div style="margin:20px 0"></div>
 	<input class="easyui-combobox" style="width:250px" data-options="
-				loader: myloader,
-				mode: 'remote',
-				valueField: 'id',
-				textField: 'name'
-			">
+        loader: myloader,
+        mode: 'remote',
+        valueField: 'id',
+        textField: 'name'
+    	">
 	<script>
-		var myloader = function(param,success,error){
-			var q = param.q || '';
-			if (q.length <= 1){return false}
-			$.ajax({
-				url: 'http://ws.geonames.org/searchJSON',
-				dataType: 'jsonp',
+    var myloader = function(param,success,error){
+    	var q = param.q || '';
+    	if (q.length <= 1){return false}
+    	$.ajax({
+        url: 'http://ws.geonames.org/searchJSON',
+        dataType: 'jsonp',
                 data: {
                     featureClass: "P",
                     style: "full",
                     maxRows: 20,
                     name_startsWith: q
                 },
-				success: function(data){
-					var items = $.map(data.geonames, function(item){
-						return {
-							id: item.geonameId,
-							name: item.name + (item.adminName1 ? ', ' + item.adminName1 : '') + ', ' + item.countryName
-						};
-					});
-					success(items);
-				},
+        success: function(data){
+        	var items = $.map(data.geonames, function(item){
+            return {
+            	id: item.geonameId,
+            	name: item.name + (item.adminName1 ? ', ' + item.adminName1 : '') + ', ' + item.countryName
+            };
+        	});
+        	success(items);
+        },
                 error: function(){
-					error.apply(this, arguments);
-				}
-			});
-		}
+        	error.apply(this, arguments);
+        }
+    	});
+    }
 	</script>
 </body>
 </html>

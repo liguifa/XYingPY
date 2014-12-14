@@ -42,29 +42,29 @@ if ($.fn.datebox){
 	$.fn.datebox.defaults.okText = 'OK';
 	$.fn.datebox.defaults.missingMessage = 'Dieses Feld wird benötigt.';
 	$.fn.datebox.defaults.formatter = function(date){
-		var y = date.getFullYear();
-		var m = date.getMonth()+1;
-		var d = date.getDate();
-		return (d<10?('0'+d):d)+'.'+(m<10?('0'+m):m)+'.'+y;
+    var y = date.getFullYear();
+    var m = date.getMonth()+1;
+    var d = date.getDate();
+    return (d<10?('0'+d):d)+'.'+(m<10?('0'+m):m)+'.'+y;
 	};
 	$.fn.datebox.defaults.parser = function(s){
-		if (!s) return new Date();
-		var ss = s.split('.');
-		var m = parseInt(ss[1],10);
-		var d = parseInt(ss[0],10);
-		var y = parseInt(ss[2],10);
-		if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
-			return new Date(y,m-1,d);
-		} else {
-			return new Date();
-		}
+    if (!s) return new Date();
+    var ss = s.split('.');
+    var m = parseInt(ss[1],10);
+    var d = parseInt(ss[0],10);
+    var y = parseInt(ss[2],10);
+    if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
+    	return new Date(y,m-1,d);
+    } else {
+    	return new Date();
+    }
 	};
 }
 if ($.fn.datetimebox && $.fn.datebox){
 	$.extend($.fn.datetimebox.defaults,{
-		currentText: $.fn.datebox.defaults.currentText,
-		closeText: $.fn.datebox.defaults.closeText,
-		okText: $.fn.datebox.defaults.okText,
-		missingMessage: $.fn.datebox.defaults.missingMessage
+    currentText: $.fn.datebox.defaults.currentText,
+    closeText: $.fn.datebox.defaults.closeText,
+    okText: $.fn.datebox.defaults.okText,
+    missingMessage: $.fn.datebox.defaults.missingMessage
 	});
 }

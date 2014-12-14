@@ -16,13 +16,13 @@
 	<input class="easyui-datebox"></input>
 	<input class="easyui-datebox" data-options="buttons:buttons"></input>
 	<script>
-		var buttons = $.extend([], $.fn.datebox.defaults.buttons);
-		buttons.splice(1, 0, {
-			text: 'MyBtn',
-			handler: function(target){
-				alert('click MyBtn');
-			}
-		});
+    var buttons = $.extend([], $.fn.datebox.defaults.buttons);
+    buttons.splice(1, 0, {
+    	text: 'MyBtn',
+    	handler: function(target){
+        alert('click MyBtn');
+    	}
+    });
 	</script>
 </body>
 </html>

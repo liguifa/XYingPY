@@ -1,16 +1,16 @@
 $(document).ready(function(){
 	$("#login_btn").click(function(){
-		$.ajax({
-			type:"post",
-			url:"?c=Home&a=loginIn",
-			data:{
-				user:"user",
-				pwd:"pwd",
-				yzm:"yzm"
-			},
-			success:function(data){
-				alert(data)
-			}
-		});
+    $.ajax({
+    	type:"post",
+    	url:"?c=Home&a=loginIn",
+    	data:{
+        user:"user",
+        pwd:"pwd",
+        yzm:"yzm"
+    	},
+    	success:function(data){
+        alert(data)
+    	}
+    });
 	});
 });
