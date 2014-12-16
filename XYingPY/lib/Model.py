@@ -1,3 +1,3 @@
-# from ..db.Mssql import db
-# class Model(db):
-# 	pass
+from ..db.MongoDB import db
+class Model(db):
+    pass

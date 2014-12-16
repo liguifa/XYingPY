@@ -18,8 +18,15 @@ class Views:
                     str_temp=arr_footer[0]
                     for (d_str,v_str) in vv.items():
                        str_temp=str_temp.replace('@'+d_str,v_str)
-                arr_header[0]+=str_temp
+                    arr_header[0]+=str_temp
                 text=arr_header[0]+arr_footer[1]
+            elif type(v) is types.InstanceType:
+                print "Content-type: text/html"
+                print ""
+                listAttr=dir(v)
+                for vv in listAttr:
+                    if vv!="__module__" and vv!="__doc__" and vv!="__init__":
+                        text=text.replace("@"+d+"."+vv,getattr(v,vv))
             else:
                 text=text.replace('@'+d,v)
         return text

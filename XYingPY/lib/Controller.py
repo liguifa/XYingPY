@@ -29,7 +29,7 @@ class Controller:
                 string+="{"
                 for (d,v) in vv.items():
                     string+="\""+d+"\":\""+v+"\","
-            string=string[0:-1]+"},"
+                string=string[0:-1]+"},"
             string="{\"total\":"+str(num)+",\"rows\":"+string[0:-1]+"]}"
         else:
             string=""
